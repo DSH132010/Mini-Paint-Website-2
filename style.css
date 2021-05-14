@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --Red: hsl(0, 100%, 50%);
+    --White: hsl(0, 0%, 100%);
+    --Transparent-Pink: hsla(298, 100%, 50%, 0.383);
+    --Darker-Pink: hsla(308, 100%, 50%, 0.644);
+    --Medium-Pink: hsla(315, 100%, 50%, 0.582);
+    --Gradient: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871)
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+body {
+    overflow-x: hidden;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    background-size: 80%;
+    background-image: url(Backgorund-image.png.png);
+    background-repeat: no-repeat;
+    color: var(--White);
+}
+
+#paint-area {
+    background-color: white;
+    border: 2px solid #ccc;
+    margin: 0px 2px;
+}
+
+.btn {
+    background-color: var(--Darker-Pink);
+    border: 2px solid var(--White);
+    color: white;
+    padding: 10px 42px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    font-weight: 500;
+}
+
+.text-inputs {
+    margin-right: 20px;
+    padding: 10px;
+    background: #fff;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.bottom {
+    height: 10%;
+    width: 100%;
+    background-color: var(--Transparent-Pink);
+    padding: 100px 10px;
+    margin: 0;
+}
+
+.top {
+    background-image: var(--Gradient);
+    width: 15%;
+    padding: 5px 70px;
+    margin: 10px auto;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    background-size: 400%;
+    animation: bg-animation 9s infinite alternate;
+}
+@keyframes bg-animation{
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}
+span {
+    font-weight: 500;
+    font-size: 18px;
+    
+}
+
+#color {
+    padding: 0;
+    width: 10%;
+    height: 50%;
+    background: transparent;
+    padding: 2px 5px;
+    background-image: var(--Gradient);
+    background-clip: text;
+    color: transparent;
+    background-size: 300%;
+    transition: background-position 1s;
+    animation: bg-animation 9s infinite alternate;
+}
+@media (max-width:800px) {
+    
+}
